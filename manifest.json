@@ -1,0 +1,33 @@
+{
+    "name": "🕉 Meditate 🕉",
+    "short_name": "🕉 Meditate 🕉",
+    "description": "An application to help you meditate calmly.",
+    "lang": "en-US",
+    "start_url": ".",
+    "scope": ".",
+    "display": "standalone",
+    "theme_color": "#448AFF",
+    "background_color": "#536DFE",
+    "icons": [
+      {
+        "src": "./assets/icon.png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "./assets/16.png",
+        "sizes": "16x16"
+      },
+      {
+        "src": "./assets/32.png",
+        "sizes": "32x32"
+      },
+      {
+        "src": "./assets/96.png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "./assets/192.png",
+        "sizes": "192x192"
+      }
+    ]
+  }

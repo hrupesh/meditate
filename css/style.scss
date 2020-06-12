@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.5s;
+    user-select: none;
+    /* supported by Chrome and Opera */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #224941 url('https://picsum.photos/1440') no-repeat center/cover;
+    color: #fff;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+#text {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 0px 0px 20px #010f1c;
+    letter-spacing: 35px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    transform: scale(1);
+
+}
+
+.grow {
+    animation: grow 2400ms linear forwards;
+}
+
+.shrink {
+    animation: shrink 2400ms linear forwards;
+}
+
+.gradient-circle {
+    background: conic-gradient(#536dfea3 0%, #f152529c 40%,
+            #2d475a 40%, #2a4054 60%,
+            #00bcd4a8 60%, #73e4799e 100%);
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: -2;
+    border-radius: 50%;
+}
+
+.circle {
+    background-color: #010f1c;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.pointer-container {
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    width: 20px;
+    height: 190px;
+    animation: rotate linear 6s forwards infinite;
+    transform-origin: bottom center;
+}
+
+.pointer {
+    background-color: white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: block;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@media (max-width:600px) {
+    .container {
+        height: 200px;
+        width: 200px;
+    }
+
+    .gradient-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .pointer-container {
+        top: -40px;
+        left: 90px;
+        height: 140px;
+    }
+}
